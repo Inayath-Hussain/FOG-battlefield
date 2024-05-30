@@ -6,6 +6,11 @@ class MenuService {
 
         return await doc.save();
     }
+
+
+    async getAllMenuItems() {
+        return await Menu.find({});
+    }
 }
 
 
