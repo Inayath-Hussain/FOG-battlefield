@@ -1,3 +1,4 @@
+import FriendsSidebar from "@src/components/FriendsSidebar/Container";
 import Header from "../components/Header";
 import Main from "../components/Main";
 
@@ -7,6 +8,8 @@ const HomePage = () => {
             <Header />
 
             <Main />
+
+            <FriendsSidebar />
         </main>
     );
 

@@ -10,8 +10,8 @@ import HelpIcon from "@src/assets/icons/side-menu-help.svg";
 import QuitIcon from "@src/assets/icons/side-menu-quit.svg";
 
 
-import BorderProvider from "./Layout/BorderProvider";
-import SideMenuItem from "./SideMenu/Item";
+import BorderProvider from "../Layout/BorderProvider";
+import SideMenuItem from "./Item";
 
 
 interface Item {
@@ -42,23 +42,8 @@ const SideMenu = () => {
         <BorderProvider className="flex flex-col justify-stretch items-stretch gap-4">
 
             {sideMenuItems.map((i) => (
-
                 <SideMenuItem title={i.title} url={i.url} activeUrl={BF4} />
 
-                // <div key={i.url}
-                //     className={`opacity-50 hover:opacity-100 relative group
-                //     ${i.url === BF4 ? "border-0 border-l-[3px] border-l-light-orange" : ""}`}>
-
-                //     <img src={i.url} alt="" width={30} key={i.url}
-                //         className={`mx-auto relative cursor-pointer`} />
-
-
-                //     {/* custom title(displayed when hovered on parent div) */}
-                //     <p className="uppercase py-[2px] px-2 text-[10px] bg-menu-pop-up-color text-white text-nowrap
-                //     hidden absolute z-10 left-[90%] top-1/2 -translate-y-1/2
-                //     group-hover:block">{i.title}</p>
-
-                // </div>
             ))}
 
 

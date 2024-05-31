@@ -1,0 +1,22 @@
+/* class for name and online status container */
+.friend-sidebar-item:hover .highlight {
+    @apply bg-white text-black;
+}
+
+
+/* class for online status of friends */
+.friend-sidebar-item:hover .online-status {
+    @apply text-friends-sidebar-hover-color;
+}
+
+
+/* class for join squad icon */
+.friend-sidebar-item:hover .join-icon {
+    @apply fill-black opacity-100;
+}
+
+
+/* class for "+" inside join squad icon */
+.friend-sidebar-item:hover .plus{
+    @apply fill-white;
+}

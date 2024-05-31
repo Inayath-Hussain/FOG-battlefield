@@ -1,5 +1,5 @@
 import GridProvider from "./Layout/GridProvider";
-import SideMenu from "./SideMenu";
+import SideMenu from "./SideMenu/Container";
 
 const Main = () => {
     return (

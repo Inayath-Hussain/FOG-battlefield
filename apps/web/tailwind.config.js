@@ -16,8 +16,12 @@ export default {
       },
       colors: {
         'main-border-color': '#ffffff26',
+        'section-border-color': '#ffffff1a',
         'light-orange': '#ee930e',
-        'menu-pop-up-color': '#101010'
+        'menu-pop-up-color': '#101010',
+        'friends-sidebar-initial': 'rgba(0,0,0,0)',
+        'friends-sidebar-hover-color': 'rgba(16,16,16,0.8)',
+        'online': '#23c13a'
       },
       gridTemplateColumns: {
         'main': '60px 1fr'

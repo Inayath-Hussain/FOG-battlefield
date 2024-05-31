@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import { menuService } from "../../services/meny"
+import { menuService } from "../../services/menu"
 import { tryCatchWrapper } from "../../utilities/tryCatchWrapper";
 
 const controller: RequestHandler = async (req, res, next) => {

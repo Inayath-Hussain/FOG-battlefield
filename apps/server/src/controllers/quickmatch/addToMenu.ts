@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { IAddToMenuBody } from "../../middlewares/quickmatch/validateAddToMenuBody";
-import { menuService } from "../../services/meny";
+import { menuService } from "../../services/menu";
 import { tryCatchWrapper } from "../../utilities/tryCatchWrapper";
 
 const controller: RequestHandler<{}, {}, IAddToMenuBody> = async (req, res, next) => {
