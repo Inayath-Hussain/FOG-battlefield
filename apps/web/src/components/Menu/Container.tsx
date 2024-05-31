@@ -1,9 +1,11 @@
+import { useEffect, useMemo, useState } from "react";
+
 import { ApiError } from "@src/services/error";
 import { IMenuItem, getAllMenuItemsService } from "@src/services/quickmatch/getAllMenuItems";
-import { useEffect, useMemo, useState } from "react";
-import MenuItemssContainer from "./ItemsContainer";
 import MainMenuItemsContainer, { MenuItemsContainerProps } from "./ItemsContainer";
 import MainMenuItemDetails from "./Details";
+import { createPortal } from "react-dom";
+import LoaderModal from "../Modal/Loader";
 
 
 
@@ -23,6 +25,7 @@ const MainMenu = () => {
 
     const [data, setData] = useState<IMenuItem[]>([]);
     const [activeMenu, setActiveMenu] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const setActiveItem = (id: string) => setActiveMenu(id)
     const removeActiveItem = () => setActiveMenu("");
@@ -30,7 +33,9 @@ const MainMenu = () => {
 
     useEffect(() => {
         const call = async () => {
+            setIsLoading(true)
             const result = await getAllMenuItemsService();
+            setIsLoading(false)
 
             if (result instanceof ApiError) return alert(result.message);
 
@@ -40,6 +45,8 @@ const MainMenu = () => {
         call()
     }, []);
 
+    const loaderDiv = useMemo(() => document.getElementById("loader"), []);
+    console.log(loaderDiv)
 
     const names = useMemo(() => extractName(data), [data]);
 
@@ -48,6 +55,8 @@ const MainMenu = () => {
             <MainMenuItemsContainer data={names} setActiveItem={setActiveItem} removeActiveItem={removeActiveItem} />
 
             <MainMenuItemDetails data={data} activeId={activeMenu} />
+
+            {isLoading ? createPortal(<LoaderModal />, loaderDiv as Element) : null}
         </div>
     );
 }
