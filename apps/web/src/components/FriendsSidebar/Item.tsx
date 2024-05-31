@@ -48,7 +48,7 @@ const FriendsSidebarItem: React.FC<FriendsSliderbarItemProps> = ({ data, type })
                         // join squad icon
                         <data.image width={42} height={42}
                             className="fill-white join-icon opacity-30 p-0 m-0 border-0"
-                            plusClassName="fill-black plus" />
+                            plusclassname="fill-black plus" />
                 }
 
 

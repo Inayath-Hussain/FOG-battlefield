@@ -1,13 +1,14 @@
 import GridProvider from "./Layout/GridProvider";
 import SideMenu from "./SideMenu/Container";
+import MainMenu from "./Menu/Container";
 
 const Main = () => {
     return (
-        <GridProvider className="flex-1">
+        <GridProvider className="flex-1 overflow-hidden">
 
             <SideMenu />
 
-            <div></div>
+            <MainMenu />
 
         </GridProvider>
     );

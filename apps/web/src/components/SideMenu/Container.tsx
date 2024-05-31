@@ -42,7 +42,7 @@ const SideMenu = () => {
         <BorderProvider className="flex flex-col justify-stretch items-stretch gap-4">
 
             {sideMenuItems.map((i) => (
-                <SideMenuItem title={i.title} url={i.url} activeUrl={BF4} />
+                <SideMenuItem title={i.title} url={i.url} activeUrl={BF4} key={i.title} />
 
             ))}
 
@@ -52,7 +52,7 @@ const SideMenu = () => {
             <div className="flex-1 flex flex-col justify-end gap-4 pb-8">
 
                 {sideMenuBottomItems.map(i => (
-                    <SideMenuItem title={i.title} url={i.url} activeUrl="" imageWidth={18} />
+                    <SideMenuItem title={i.title} url={i.url} activeUrl="" imageWidth={18} key={i.title} />
                 ))}
 
             </div>

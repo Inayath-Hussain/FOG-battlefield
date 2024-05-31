@@ -43,7 +43,7 @@ const FriendsSidebar = () => {
             {/* online friends */}
             <FriendsSidebarSection sectionIcon={OnlineIcon} sectionText="Online">
                 {onlineFriends.map(ol => (
-                    <FriendsSidebarItem data={ol} type="online" />
+                    <FriendsSidebarItem data={ol} type="online" key={ol.name} />
                 ))}
             </FriendsSidebarSection>
 
@@ -51,7 +51,7 @@ const FriendsSidebar = () => {
             {/* offline friends */}
             <FriendsSidebarSection sectionIcon={OfflineIcon} sectionText="Offline">
                 {offlineFriends.map(of => (
-                    <FriendsSidebarItem data={of} type="offline" />
+                    <FriendsSidebarItem data={of} type="offline" key={of.name} />
                 ))}
             </FriendsSidebarSection>
 

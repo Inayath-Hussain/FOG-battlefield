@@ -18,6 +18,7 @@ export default {
         'main-border-color': '#ffffff26',
         'section-border-color': '#ffffff1a',
         'light-orange': '#ee930e',
+        'dark-orange': '#ff8a00',
         'menu-pop-up-color': '#101010',
         'friends-sidebar-initial': 'rgba(0,0,0,0)',
         'friends-sidebar-hover-color': 'rgba(16,16,16,0.8)',

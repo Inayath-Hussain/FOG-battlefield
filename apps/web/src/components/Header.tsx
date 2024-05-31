@@ -18,7 +18,7 @@ const Header = () => {
                     {/* back button */}
                     <img src={BackIcon} alt="" />
 
-                    <p className="text-xs uppercase">multiplayer</p>
+                    <p className="text-xs uppercase hover:font-bold">multiplayer</p>
 
                     <h3 className="">/</h3>
                 </div>
