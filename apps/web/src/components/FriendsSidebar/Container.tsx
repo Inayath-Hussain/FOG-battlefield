@@ -1,5 +1,4 @@
 import SquadIcon from "@src/assets/icons/squad.svg";
-// import JoinIcon from "@src/assets/icons/join.svg";
 import OnlineIcon from "@src/assets/icons/online.svg";
 import OfflineIcon from "@src/assets/icons/offline.svg";
 

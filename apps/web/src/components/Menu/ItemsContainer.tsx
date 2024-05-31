@@ -1,7 +1,9 @@
 import { IMenuItem } from "@src/services/quickmatch/getAllMenuItems";
-import "./ItemsContainer.css";
 import MainMenuItem from "./Item";
 import { RemoveActiveItem, SetActiveItem } from "./Container";
+
+import "./ItemsContainer.css";
+
 
 export interface MenuItemsContainerProps {
     data: Pick<IMenuItem, "_id" | "name">[]
@@ -10,8 +12,6 @@ export interface MenuItemsContainerProps {
 }
 
 const MainMenuItemsContainer: React.FC<MenuItemsContainerProps> = ({ data, removeActiveItem, setActiveItem }) => {
-
-
 
     return (
         <div className="pr-2 w-72 
